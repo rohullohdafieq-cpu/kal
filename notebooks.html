@@ -182,9 +182,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>1.1 Sistem persamaan linear</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.1 Sistem persamaan linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acc%20oy.html">Penyelesaian SPLTV dan SPL4V dengan Eliminasi Gaussian</a></li>
+<li class="toctree-l1"><a class="reference internal" href="invers.html">Invers Matriks</a></li>
 </ul>
 
     </div>
@@ -380,8 +381,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>1.1.1 Sistem persamaan linear</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-1-2-persamaan-linear-dan-non-linear"><strong>Contoh 1.1.2. Persamaan linear dan non-linear.</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1.1 Sistem persamaan linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-1-2-persamaan-linear-dan-non-linear">Contoh 1.1.2. Persamaan linear dan non-linear.</a></li>
 </ul>
 </li>
 </ul>
@@ -396,10 +397,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="sistem-persamaan-linear">
-<h1><strong>1.1 Sistem persamaan linear</strong><a class="headerlink" href="#sistem-persamaan-linear" title="Link to this heading">#</a></h1>
+<h1>1.1 Sistem persamaan linear<a class="headerlink" href="#sistem-persamaan-linear" title="Link to this heading">#</a></h1>
 <p>Perhitungan dan studi solusi persamaan, dan <em>sistem persamaan</em>, tidak diragukan lagi memainkan peran penting dalam matematika; meskipun kami ingin menambahkan bahwa ini bukanlah satu-satunya hal yang dilakukan para matematikawan! Dalam bab ini, kita akan mengembangkan teori yang pada dasarnya lengkap tentang keluarga persamaan matematika yang sangat sederhana: yaitu, <em>persamaan linear</em>. Ini akan berfungsi sebagai pengantar yang agak tidak langsung untuk studi kita tentang aljabar linear, karena di balik deskripsi parametrik kita tentang solusi sistem linear terdapat konsep ruang vektor seperti subruang, rentang, dan kebebasan linear. Lebih lanjut, kita akan bertemu dengan salah satu alat komputasi terpenting dalam aljabar linear: <a class="reference external" href="https://www.google.com/search?q=%23">eliminasi Gauss</a>.</p>
 <section id="id1">
-<h2><strong>1.1.1 Sistem persamaan linear</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h2>1.1.1 Sistem persamaan linear<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p><strong>Definisi 1.1.1. Persamaan linear.</strong> Ekspresi <em>linier</em> dalam <span class="math notranslate nohighlight">\(n\)</span> hal yang tidak diketahui (atau variabel) <span class="math notranslate nohighlight">\(x_1, x_2, \dots, x_n\)</span> merupakan ungkapan bentuk</p>
 <div class="math notranslate nohighlight">
 \[a_1x_1 + a_2x_2 + \dots + a_nx_n,\]</div>
@@ -410,7 +411,7 @@ document.write(`
 <p>yang kita sebut <em><strong>bentuk standarnya</strong></em>. Sebuah persamaan dalam variabel yang tidak diketahui <span class="math notranslate nohighlight">\(x_1, x_2, \dots, x_n\)</span> suatu fungsi dikatakan <em><strong>nonlinier</strong></em> jika tidak dapat disederhanakan ke bentuk (1.1.1) hanya dengan menggunakan penjumlahan dan pengurangan.</p>
 <p>Diberikan persamaan linear dengan bentuk standar (1.1.1), persamaan tersebut disebut <strong>homogen</strong> jika <span class="math notranslate nohighlight">\(b = 0\)</span>, dan <strong>tidak homogen</strong> jika <span class="math notranslate nohighlight">\(b \neq 0\)</span>.</p>
 <section id="contoh-1-1-2-persamaan-linear-dan-non-linear">
-<h3><strong>Contoh 1.1.2. Persamaan linear dan non-linear.</strong><a class="headerlink" href="#contoh-1-1-2-persamaan-linear-dan-non-linear" title="Link to this heading">#</a></h3>
+<h3>Contoh 1.1.2. Persamaan linear dan non-linear.<a class="headerlink" href="#contoh-1-1-2-persamaan-linear-dan-non-linear" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Mempertimbangkan <span class="math notranslate nohighlight">\(\sqrt{3}x + \sin(5) = 2z - e^4y\)</span>. Ini adalah persamaan linear dengan variabel yang tidak diketahui <span class="math notranslate nohighlight">\(x, y, z\)</span>. Bentuk standarnya adalah:</p></li>
 </ol>
@@ -514,8 +515,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>1.1.1 Sistem persamaan linear</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-1-2-persamaan-linear-dan-non-linear"><strong>Contoh 1.1.2. Persamaan linear dan non-linear.</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1.1 Sistem persamaan linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-1-2-persamaan-linear-dan-non-linear">Contoh 1.1.2. Persamaan linear dan non-linear.</a></li>
 </ul>
 </li>
 </ul>
