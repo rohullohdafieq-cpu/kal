@@ -57,10 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'soal matriks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Invers Matriks" href="invers.html" />
+    <link rel="prev" title="Matriks" href="invers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,8 +184,16 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">1.1 Sistem persamaan linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acc%20oy.html">Penyelesaian SPLTV dan SPL4V dengan Eliminasi Gaussian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="invers.html">Invers Matriks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="invers.html">Matriks</a></li>
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">A. Hasil Determinan Matriks dengan Ekspansi</a></li>
+
+
+
+
+
+
+
 
 </ul>
 
@@ -380,32 +390,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A. Hasil Determinan Matriks dengan Ekspansi</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-22">1. Matriks 2×2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-33">2. Matriks 3×3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-44">3. Matriks 4×4</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b-penyelesaian-soal-dengan-metode-matriks-adjoin">B. Penyelesaian Soal dengan Metode Matriks Adjoin</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-4">Soal Nomor 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan">1. Determinan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjoin">2. Adjoin</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invers">3. Invers</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-5">Soal Nomor 5</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Determinan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2. Adjoin</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3. Invers</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-6">Soal Nomor 6</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1. Determinan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2. Invers</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A. Hasil Determinan Matriks dengan Ekspansi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b-penyelesaian-soal-dengan-metode-matriks-adjoin">B. Penyelesaian Soal dengan Metode Matriks Adjoin</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">6</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban-akhir">Jawaban Akhir</a></li>
 </ul>
 
             </nav>
@@ -420,168 +413,295 @@ document.write(`
                   
   <section id="a-hasil-determinan-matriks-dengan-ekspansi">
 <h1>A. Hasil Determinan Matriks dengan Ekspansi<a class="headerlink" href="#a-hasil-determinan-matriks-dengan-ekspansi" title="Link to this heading">#</a></h1>
-<section id="matriks-22">
-<h2>1. Matriks 2×2<a class="headerlink" href="#matriks-22" title="Link to this heading">#</a></h2>
-<p>[
-A = \begin{pmatrix}
--7 &amp; -5 \
-1 &amp; 4
-\end{pmatrix}
-]</p>
-<p>Determinannya:</p>
-<p>[
-\det(A) = (-7)(4) - (-5)(1) = -28 + 5 = -23
-]</p>
-<p><strong>Hasil: (\det(A) = -23)</strong></p>
 </section>
-<section id="matriks-33">
-<h2>2. Matriks 3×3<a class="headerlink" href="#matriks-33" title="Link to this heading">#</a></h2>
-<p>[
-A = \begin{pmatrix}
-0 &amp; 2 &amp; -3 \
-1 &amp; -2 &amp; -1 \
-0 &amp; 0 &amp; 1
-\end{pmatrix}
-]</p>
-<p>Matriks ini berbentuk segitiga atas, sehingga determinan adalah hasil kali elemen diagonal utama:</p>
-<p>[
-\det(A) = 0 \cdot (-2) \cdot 1 = 0
-]</p>
-<p><strong>Hasil: (\det(A) = 0)</strong></p>
-</section>
-<section id="matriks-44">
-<h2>3. Matriks 4×4<a class="headerlink" href="#matriks-44" title="Link to this heading">#</a></h2>
-<p>[
-A =
-\begin{pmatrix}
-1 &amp; -3 &amp; 1 &amp; 1 \
--3 &amp; 1 &amp; 1 &amp; 1 \
-1 &amp; 1 &amp; -3 &amp; 1 \
-1 &amp; 1 &amp; 1 &amp; -3
-\end{pmatrix}
-]</p>
-<p>Jika semua baris dijumlahkan ke baris pertama, diperoleh baris nol, sehingga determinan bernilai nol.</p>
-<p><strong>Hasil: (\det(A) = 0)</strong></p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="b-penyelesaian-soal-dengan-metode-matriks-adjoin">
-<h1>B. Penyelesaian Soal dengan Metode Matriks Adjoin<a class="headerlink" href="#b-penyelesaian-soal-dengan-metode-matriks-adjoin" title="Link to this heading">#</a></h1>
-<section id="soal-nomor-4">
-<h2>Soal Nomor 4<a class="headerlink" href="#soal-nomor-4" title="Link to this heading">#</a></h2>
-<p><strong>Matriks:</strong><br />
-[
-A = \begin{bmatrix} -7 &amp; -5 \ 1 &amp; 4 \end{bmatrix}
-]</p>
-<section id="determinan">
-<h3>1. Determinan<a class="headerlink" href="#determinan" title="Link to this heading">#</a></h3>
-<p>[
-\det A = (-7 \cdot 4) - (-5 \cdot 1) = -28 + 5 = -23
-]</p>
-</section>
-<section id="adjoin">
-<h3>2. Adjoin<a class="headerlink" href="#adjoin" title="Link to this heading">#</a></h3>
-<p>Untuk matriks (2 \times 2), adjoin diperoleh dengan menukar elemen diagonal utama dan mengubah tanda diagonal sekunder:</p>
-<p>[
-\text{adj } A = \begin{bmatrix} 4 &amp; 5 \ -1 &amp; -7 \end{bmatrix}
-]</p>
-</section>
-<section id="invers">
-<h3>3. Invers<a class="headerlink" href="#invers" title="Link to this heading">#</a></h3>
-<p>[
-A^{-1} = \frac{1}{\det A} \cdot \text{adj } A
-= -\frac{1}{23} \begin{bmatrix} 4 &amp; 5 \ -1 &amp; -7 \end{bmatrix}
-]</p>
-<p>[
-A^{-1} =
-\begin{bmatrix}
--4/23 &amp; -5/23 \
-1/23 &amp; 7/23
-\end{bmatrix}
-]</p>
-</section>
-</section>
-<section id="soal-nomor-5">
-<h2>Soal Nomor 5<a class="headerlink" href="#soal-nomor-5" title="Link to this heading">#</a></h2>
-<p><strong>Matriks:</strong><br />
-[
-A = \begin{bmatrix}
-0 &amp; 2 &amp; -3 \
-1 &amp; -2 &amp; -1 \
-0 &amp; 0 &amp; 1
-\end{bmatrix}
-]</p>
 <section id="id1">
-<h3>1. Determinan<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<p>Ekspansi pada baris ketiga:
-[
-\det A = 1 \begin{vmatrix} 0 &amp; 2 \ 1 &amp; -2 \end{vmatrix}
-= 1(0 - 2) = -2
-]</p>
+<h1>1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+-7 &amp; -5 \\
+1 &amp; 4
+\end{bmatrix}
+\end{split}\]</div>
+<p>Gunakan rumus determinan matriks 2×2:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = (-7)(4) - (-5)(1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= -28 + 5 = -23
+\]</div>
+<hr class="docutils" />
 </section>
 <section id="id2">
-<h3>2. Adjoin<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<p>Hasil kofaktor yang sudah ditranspose:</p>
-<p>[
-\text{adj } A =
-\begin{bmatrix}
--2 &amp; -2 &amp; -8 \
--1 &amp; 0 &amp; -3 \
-0 &amp; 0 &amp; -2
-\end{bmatrix}
-]</p>
-</section>
-<section id="id3">
-<h3>3. Invers<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<p>[
-A^{-1} = \frac{1}{-2}
-\begin{bmatrix}
--2 &amp; -2 &amp; -8 \
--1 &amp; 0 &amp; -3 \
-0 &amp; 0 &amp; -2
-\end{bmatrix}
-]</p>
-<p>[
-A^{-1} =
-\begin{bmatrix}
-1 &amp; 1 &amp; 4 \
-1/2 &amp; 0 &amp; 3/2 \
-0 &amp; 0 &amp; 1
-\end{bmatrix}
-]</p>
-</section>
-</section>
-<section id="soal-nomor-6">
-<h2>Soal Nomor 6<a class="headerlink" href="#soal-nomor-6" title="Link to this heading">#</a></h2>
-<p><strong>Matriks:</strong>
-[
+<h1>2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A =
 \begin{bmatrix}
-1 &amp; -3 &amp; 1 &amp; 1 \
--3 &amp; 1 &amp; 1 &amp; 1 \
-1 &amp; 1 &amp; -3 &amp; 1 \
+0 &amp; 2 &amp; -3 \\
+1 &amp; -2 &amp; -1 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Ekspansi baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\det(A) =
+0
+- 2
+\begin{vmatrix}
+1 &amp; -1 \\
+0 &amp; 1
+\end{vmatrix}
++ (-3)
+\begin{vmatrix}
+1 &amp; -2 \\
+0 &amp; 0
+\end{vmatrix}
+\end{split}\]</div>
+<p>Hitung minor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{vmatrix}
+1 &amp; -1 \\
+0 &amp; 1
+\end{vmatrix}
+= 1
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{vmatrix}
+1 &amp; -2 \\
+0 &amp; 0
+\end{vmatrix}
+= 0
+\end{split}\]</div>
+<p>Substitusi:</p>
+<div class="math notranslate nohighlight">
+\[
+= -2(1) + (-3)(0)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= -2
+\]</div>
+</section>
+<section id="id3">
+<h1>3<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+1 &amp; -3 &amp; 1 &amp; 1 \\
+-3 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -3 &amp; 1 \\
 1 &amp; 1 &amp; 1 &amp; -3
 \end{bmatrix}
-]</p>
+\end{split}\]</div>
+<p>Lakukan operasi baris:</p>
+<div class="math notranslate nohighlight">
+\[
+R_2 = R_2 + 3R_1
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+R_3 = R_3 - R_1
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+R_4 = R_4 - R_1
+\]</div>
+<p>Hasilnya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; -3 &amp; 1 &amp; 1 \\
+0 &amp; -8 &amp; 4 &amp; 4 \\
+0 &amp; 4 &amp; -4 &amp; 0 \\
+0 &amp; 4 &amp; 0 &amp; -4
+\end{bmatrix}
+\end{split}\]</div>
+<p>Selanjutnya, hitung determinan dengan ekspansi pada kolom pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\det(A) = 1 \cdot
+\begin{vmatrix}
+-8 &amp; 4 &amp; 4 \\
+4 &amp; -4 &amp; 0 \\
+4 &amp; 0 &amp; -4
+\end{vmatrix}
+\end{split}\]</div>
+<p>Hitung determinan 3×3:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+=
+-8
+\begin{vmatrix}
+-4 &amp; 0 \\
+0 &amp; -4
+\end{vmatrix}
+- 4
+\begin{vmatrix}
+4 &amp; 0 \\
+4 &amp; -4
+\end{vmatrix}
++ 4
+\begin{vmatrix}
+4 &amp; -4 \\
+4 &amp; 0
+\end{vmatrix}
+\end{split}\]</div>
+<p>Hitung masing-masing minor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{vmatrix}
+-4 &amp; 0 \\
+0 &amp; -4
+\end{vmatrix}
+= 16
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{vmatrix}
+4 &amp; 0 \\
+4 &amp; -4
+\end{vmatrix}
+= -16
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{vmatrix}
+4 &amp; -4 \\
+4 &amp; 0
+\end{vmatrix}
+= 16
+\end{split}\]</div>
+<p>Substitusi:</p>
+<div class="math notranslate nohighlight">
+\[
+= (-8)(16) - 4(-16) + 4(16)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= -128 + 64 + 64
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= 0
+\]</div>
+<p>Jadi:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = 0
+\]</div>
+</section>
+<section id="b-penyelesaian-soal-dengan-metode-matriks-adjoin">
+<h1>B. Penyelesaian Soal dengan Metode Matriks Adjoin<a class="headerlink" href="#b-penyelesaian-soal-dengan-metode-matriks-adjoin" title="Link to this heading">#</a></h1>
+</section>
 <section id="id4">
-<h3>1. Determinan<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
-<p>[
-\det A = -128
-]</p>
+<h1>4<a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+-7 &amp; -5 \\
+1 &amp; 4
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = -23
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\frac{1}{-23}
+\begin{bmatrix}
+4 &amp; 5 \\
+-1 &amp; -7
+\end{bmatrix}
+=
+\begin{bmatrix}
+-4/23 &amp; -5/23 \\
+1/23 &amp; 7/23
+\end{bmatrix}
+\end{split}\]</div>
+<hr class="docutils" />
 </section>
 <section id="id5">
-<h3>2. Invers<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
-<p>Karena matriks simetris dengan pola khusus, inversnya:</p>
-<p>[
+<h1>5<a class="headerlink" href="#id5" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+0 &amp; 2 &amp; -3 \\
+1 &amp; -2 &amp; -1 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = -2
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A^{-1} =
 \begin{bmatrix}
--3/16 &amp; -5/16 &amp; -1/8 &amp; -1/8 \
--5/16 &amp; -3/16 &amp; -1/8 &amp; -1/8 \
--1/8 &amp; -1/8 &amp; -3/16 &amp; -5/16 \
--1/8 &amp; -1/8 &amp; -5/16 &amp; -3/16
+1 &amp; 1 &amp; 4 \\
+1/2 &amp; 0 &amp; 3/2 \\
+0 &amp; 0 &amp; 1
 \end{bmatrix}
-]</p>
+\end{split}\]</div>
+<hr class="docutils" />
 </section>
+<section id="id6">
+<h1>6<a class="headerlink" href="#id6" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+1 &amp; -3 &amp; 1 &amp; 1 \\
+-3 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -3 &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; -3
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+A^{-1} \text{ tidak ada}
+\]</div>
+<hr class="docutils" />
 </section>
+<section id="jawaban-akhir">
+<h1>Jawaban Akhir<a class="headerlink" href="#jawaban-akhir" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\begin{bmatrix}
+-4/23 &amp; -5/23 \\
+1/23 &amp; 7/23
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\begin{bmatrix}
+1 &amp; 1 &amp; 4 \\
+1/2 &amp; 0 &amp; 3/2 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{Tidak memiliki invers}
+\]</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -620,7 +740,7 @@ A^{-1} =
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Invers Matriks</p>
+        <p class="prev-next-title">Matriks</p>
       </div>
     </a>
 </div>
@@ -639,32 +759,15 @@ A^{-1} =
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A. Hasil Determinan Matriks dengan Ekspansi</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-22">1. Matriks 2×2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-33">2. Matriks 3×3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-44">3. Matriks 4×4</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b-penyelesaian-soal-dengan-metode-matriks-adjoin">B. Penyelesaian Soal dengan Metode Matriks Adjoin</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-4">Soal Nomor 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan">1. Determinan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjoin">2. Adjoin</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invers">3. Invers</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-5">Soal Nomor 5</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Determinan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2. Adjoin</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3. Invers</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-6">Soal Nomor 6</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1. Determinan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2. Invers</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A. Hasil Determinan Matriks dengan Ekspansi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b-penyelesaian-soal-dengan-metode-matriks-adjoin">B. Penyelesaian Soal dengan Metode Matriks Adjoin</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">6</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban-akhir">Jawaban Akhir</a></li>
 </ul>
 
   </nav></div>
